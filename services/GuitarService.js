@@ -32,5 +32,11 @@ class GuitarService {
 		return guitar;
 	}
 
+	async deleteGuitar(guitarId) {
+		return this.Guitar.destroy({
+			where: { id: guitarId},
+		})
+	}
+
 }
 module.exports = GuitarService;
